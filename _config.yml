@@ -1,6 +1,6 @@
-title: "Blog Title"
-author: "Blog Author"
-description: "My blog"
+title: "Push, pull, and two smoking circuits"
+author: "Dmitry Murashov"
+description: "Dmitry Murashov: hardware, consulting, and embedded code"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
