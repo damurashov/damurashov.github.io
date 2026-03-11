@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang }}">
-
+<html lang="en">
 {% include head.html %}
-
-<header class="hover smooth">
-  {% unless site.show_minimal and site.navigation and site.external %}
-    <h1 {% if site.navigation and site.external %}class="full"{% endif %}><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
-  {% endunless %}
-  {% include menu.html menu=site.navigation %}
-  {% include menu.html menu=site.external %}
-</header>
-
-{{ content }}
-
-{%- if site.footer -%}
-<footer class="hover">
-  <div>{{ site.description }}</div>
-  {% include menu.html menu=site.footer %}
+<body>
+<div class="container">
+  {% include nav.html %}
+  <hr class="stylish"/>
+  {{ content }}
+</div>
+<footer>
+  <hr class="stylish"/>
+  {% include nav.html %}
+  <div>
+    Theme: <a href="https://github.com/abhn/Elementary">Elementary</a>
+    <br/>
+    <a>{{ site.name }}</a> &copy; {{ site.time | date: '%Y' }}
+  </div>
 </footer>
-{%- endif -%}
-
+{% if site.javascript_enabled %}
+  <script src="/assets/main.js"></script>
+{% endif %}
+</body>
 </html>
