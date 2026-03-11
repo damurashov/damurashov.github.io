@@ -16,16 +16,8 @@ featured_posts:
     title: 'Featured post #3'
 
 collections:
-  news:
-    title: News
-    default_open: false
-    output: true
   bits:
     title: Bits
-    default_open: true
-    output: true
-  posts:
-    title: Essays
     default_open: true
     output: true
 
@@ -35,16 +27,6 @@ defaults:
     values:
       title: Bits
       permalink: /bits/:title
-  - scope:
-      type: posts
-    values:
-      title: Essays
-      permalink: /post/:title
-  - scope:
-      type: news
-    values:
-      title: News
-      permalink: /news/:title
 
 plugins:
   - jekyll-sitemap
