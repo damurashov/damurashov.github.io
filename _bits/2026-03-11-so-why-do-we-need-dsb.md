@@ -106,4 +106,4 @@ The same in English:
 
 - There is a processor's pipeline.  An instruction entering the pipeline is not executed immediately;
 - There also is a thing called Store Buffer. For write operations, the following holds: when we store (`STR`) something somewhere, this something may stay for some time in Store Buffer;
-- `DSB` "completes when all explicit memory accesses before it complete", and no following instructions execute before `DSB`. In other words, (1) if there is an instruction before `DSB`, it WILL be through the entire pipeline before DSB. (2) if there is an instruction after `DSB`, it will not execute until `DSB` is executed.
+- `DSB` "completes when all explicit memory accesses before it complete", and no following instructions execute before `DSB`. In other words, (1) if there is a memory-related instruction before `DSB`, it WILL be through the entire pipeline before DSB. (2) if there is a memory-related instruction after `DSB`, it will not execute until `DSB` is executed.
