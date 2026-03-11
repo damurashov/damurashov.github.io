@@ -20,12 +20,21 @@ collections:
     title: News
     default_open: false
     output: true
+  bits:
+    title: Bits
+    default_open: true
+    output: true
   posts:
     title: Essays
     default_open: true
     output: true
 
 defaults:
+  - scope:
+      type: bits
+    values:
+      title: Bits
+      permalink: /bits/:title
   - scope:
       type: posts
     values:
