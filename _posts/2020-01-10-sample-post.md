@@ -31,6 +31,15 @@ HTML and <abbr title="cascading stylesheets">CSS<abbr> are our tools. Mauris a a
 
 > Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
 
+### Code example
+
+```c
+int main(void)
+{
+	return 0;
+}
+```
+
 ## List Types
 
 ### Ordered Lists
