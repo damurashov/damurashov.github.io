@@ -9,7 +9,7 @@ tags:
 
 # So, why, again, do we need DSB. ARM Store Buffer;
 
-# TL; DR
+## TL; DR
 
 - Take STM32H7 with Cortex-M7;
 - Cortex-M7 uses [Store Buffer](https://www.systemonchips.com/armv7-store-buffer-behavior-and-data-coherency-issues-in-single-and-multi-core-systems/). This is a temporary storage where the values go before they've written into memory. It is different from cache.
@@ -70,7 +70,7 @@ Right? Wrong. There were no EXTI updates;
 3. The peripheral triggers ISR, because its register still signals pending event;
 4. We exit `EXTI->PR`. By this time, the value finally reaches the destination;
 
-## `DSB` comes to the rescue;
+## `DSB` comes to rescue;
 
 Here is what happens when we add DSB;
 
