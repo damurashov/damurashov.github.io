@@ -20,7 +20,7 @@ tags:
 
 Consider an example ISR handler;
 
-```
+```c++
 // A debug GPIO
 
 debugGpio1->write(false);
@@ -74,7 +74,7 @@ Right? Wrong. There were no EXTI updates;
 
 Here is what happens when we add DSB;
 
-```
+```c++
 debugGpio1->write(false);
 
 const uint32_t pr = EXTI->PR1;
