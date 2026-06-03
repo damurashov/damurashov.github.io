@@ -20,12 +20,21 @@ collections:
     title: Bits
     default_open: true
     output: true
+  projects:
+    title: Projects
+    default_open: true
+    output: true
 
 defaults:
   - scope:
       type: bits
     values:
       title: Bits
+      permalink: /bits/:title
+  - scope:
+      type: projects
+    values:
+      title: Projects
       permalink: /bits/:title
 
 plugins:
